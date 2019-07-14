@@ -58,3 +58,5 @@ $route['login/auth'] = 'login/auth';
 $route['logout'] = 'login/logout';
 
 $route['home'] = 'home/index';
+
+$route['reportform'] = 'reportform/index';

@@ -10,13 +10,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <title></title>
 </head>
 <body>
-    <?php echo base_url() ?> <br/>
 
     <div id='header'></div>
-    <div id='featurebar'>
-        <a href="<?php echo base_url() . "reportform"  ?>"><button>Buat Laporan</button></a>
+    <div id='featurebar'></div>
+    <div id='reporttypelist'>
+        
+
     </div>
-    <div id='reportcontainer'></div>
+    <div id='reportform'></div>
 
     <br/>
     <a href="<?php echo base_url() . "logout" ?>">Logout</a>
