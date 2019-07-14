@@ -59,4 +59,5 @@ $route['logout'] = 'login/logout';
 
 $route['home'] = 'home/index';
 
+$route['reportform/(:any)'] = 'reportform/form/$1';
 $route['reportform'] = 'reportform/index';
