@@ -12,9 +12,16 @@ class Login extends CI_Controller {
 		$username = $_POST['username'];
 		$password = $_POST['password'];
 
+		$this->load->model('user_model', 'user');
+		if(sizeof($this->user->getUser($username, hash('sha256', $password))) <= 0){
+			// butuh error reporting
+			redirect('login');
+		}
+		$opd = $this->user->getOpd($username)[0]->user_opd;
+
 		// set variabel (session?) dengan nama opd
 		session_start();
-		$this->session->set_tempdata('credential', $username, 3600);
+		$this->session->set_tempdata('credential', $opd, 3600);
 
 		// route ke halaman home
 		// note: /index.php/home

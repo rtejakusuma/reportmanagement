@@ -11,6 +11,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </head>
 <body>
     <?php echo base_url() ?> <br/>
+
+    
+
+    <br/>
     <a href="<?php echo base_url() . "logout" ?>">Logout</a>
 </body>
 </html>
