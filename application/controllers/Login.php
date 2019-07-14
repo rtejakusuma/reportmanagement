@@ -4,6 +4,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Login extends CI_Controller {
 	public function index()
 	{
+		if($this->session->tempdata('credential') != NULL){
+			redirect('home');
+		}
 		$this->load->view('login');
 	}
 	public function auth()
@@ -21,7 +24,7 @@ class Login extends CI_Controller {
 
 		// set variabel (session?) dengan nama opd
 		session_start();
-		$this->session->set_tempdata('credential', $opd, 3600);
+		$this->session->set_tempdata('credential', $opd, 7200);
 
 		// route ke halaman home
 		// note: /index.php/home
