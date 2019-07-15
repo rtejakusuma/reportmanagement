@@ -8,4 +8,14 @@ class User_model extends CI_Model
         $query = $this->db->get('user');
         return $query->result();
     }
+
+    public function get_login($username)
+    {
+        return $this->db->get_where('user', ['username' => $username])->row_array();
+    }
+
+    public function insert($data)
+    {
+        return $this->db->insert('user', $data);
+    }
 }
